@@ -11,5 +11,5 @@
 <!-- Replace the Space with an 'x' inside the '[ ]' to Check the Box. -->
 
 * [ ] Have the Changes been Tested?
-* [ ] Were the Correct Compiler Versions used?
-* [ ] Have the Compiler References been Removed?
+* [ ] Has the Source Code been Cleaned Up?
+* [ ] Were the Files Placed in the right Locations?
