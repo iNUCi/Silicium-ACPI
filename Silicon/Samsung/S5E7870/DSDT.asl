@@ -71,27 +71,28 @@ DefinitionBlock ("DSDT.aml", "DSDT", 2, "SAMSUN", "S5E7870 ", 3)
             Name (_HID, "EXNS000A")
             Name (_UID, 0)
             Name (_CCA, 0)
-            
+
             Name (_CRS, ResourceTemplate ()
             {
                 Memory32Fixed (ReadWrite, 0x13540000, 0x00002000)
 
                 Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, ) { 0x115 }
             })
-            
+
             Name (_DSD, Package () {
-                ToUUID("daffd814-6eba-4d8c-8a91-bc9bbf4aa301"),
+                ToUUID ("DAFFD814-6EBA-4D8C-8A91-BC9BBF4AA301"),
+
                 Package () {
-                    Package () { "fifo-depth", 0x40 },
-                    Package () { "clock-frequency", 100000000 },
-                    Package () { "max-frequency", 800000000 },
-                    Package () { "bus-width", 8 },
+                    Package () { "fifo-depth",        0x40 },
+                    Package () { "clock-frequency",   100000000 },
+                    Package () { "max-frequency",     800000000 },
+                    Package () { "bus-width",         8 },
                     Package () { "cap-mmc-highspeed", 1 },
-                    Package () { "sd-uhs-ddr50", 1 },
-                    Package () { "sd-uhs-sdr50", 1 },
-                    Package () { "sd-uhs-sdr104", 1 },
-                    Package () { "broken-cd", 1 },
-                    Package () { "mmc-hs200-1_8v", 1 },
+                    Package () { "sd-uhs-ddr50",      1 },
+                    Package () { "sd-uhs-sdr50",      1 },
+                    Package () { "sd-uhs-sdr104",     1 },
+                    Package () { "broken-cd",         1 },
+                    Package () { "mmc-hs200-1_8v",    1 },
                 }
             })
 

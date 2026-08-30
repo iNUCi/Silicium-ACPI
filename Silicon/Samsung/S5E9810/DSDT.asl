@@ -1,4 +1,4 @@
-DefinitionBlock ("DSDT_Minimal.aml", "DSDT", 2, "SAMSUN", "S5E9830 ", 3)
+DefinitionBlock ("DSDT.aml", "DSDT", 2, "SAMSUN", "S5E9810 ", 3)
 {
     Scope (\_SB)
     {

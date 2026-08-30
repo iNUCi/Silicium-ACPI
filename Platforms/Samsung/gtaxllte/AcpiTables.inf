@@ -5,10 +5,30 @@
   MODULE_TYPE                    = USER_DEFINED
   VERSION_STRING                 = 1.0
 
+[Sources]
+  S5E7870/FADT.aslc
+  S5E7870/GTDT.aslc
+  S5E7870/MADT.aslc
+
 [Binaries]
   ASL|Common/SSDT.aml
-  ASL|S5E7870/APIC.aml
   ASL|S5E7870/DBG2.aml
   ASL|S5E7870/DSDT.aml
-  ASL|S5E7870/FACP.aml
-  ASL|S5E7870/GTDT.aml
+
+[Packages]
+  ArmPkg/ArmPkg.dec
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+
+[FixedPcd]
+  gArmTokenSpaceGuid.PcdArmArchTimerHypIntrNum
+  gArmTokenSpaceGuid.PcdArmArchTimerIntrNum
+  gArmTokenSpaceGuid.PcdArmArchTimerSecIntrNum
+  gArmTokenSpaceGuid.PcdArmArchTimerVirtIntrNum
+  gArmTokenSpaceGuid.PcdGicDistributorBase
+  gArmTokenSpaceGuid.PcdGicInterruptInterfaceBase
+
+  gEfiMdeModulePkgTokenSpaceGuid.PcdAcpiDefaultCreatorId
+  gEfiMdeModulePkgTokenSpaceGuid.PcdAcpiDefaultCreatorRevision
+  gEfiMdeModulePkgTokenSpaceGuid.PcdAcpiDefaultOemRevision
+  gEfiMdeModulePkgTokenSpaceGuid.PcdAcpiDefaultOemTableId
